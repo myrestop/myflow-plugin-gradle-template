@@ -6,7 +6,7 @@ names:
 entry: ./xxx.jar
 version: 1.0.0
 logo: ./logos/xxx.png
-homepage: https://myrest.top/myflow/plugins/xxx
+homepage: https://xxx.xxx/xxx
 compatible-version:
   since-build: 0
   until-build: 2147483647
@@ -14,7 +14,7 @@ description-filename: description.md
 owner:
   name: xxx
   email: xxx@xxx.xxx
-  homepage: https://myrest.top/myflow
+  homepage: https://xxx.xxx/xxx
 categories:
   - THEME
   - PRODUCTIVITY
