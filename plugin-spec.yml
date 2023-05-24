@@ -36,7 +36,7 @@ languages:
   - EN_US
   - ZH_CN
   - ZH_TW
-language-bundle-name: xxx
+language-bundle-name: com.example.kotlin.LanguageBundle
 actions:
   - keywords:
       - xxx
