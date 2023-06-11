@@ -6,7 +6,6 @@ names:
 entry: ./xxx.jar
 version: 1.0.0
 logo: ./logos/xxx.png
-homepage: https://xxx.xxx/xxx
 compatible-version:
   since-build: 0
   until-build: 2147483647
