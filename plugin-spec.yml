@@ -40,5 +40,5 @@ actions:
   - keywords:
       - xxx
     logo: ./logos/xxx.png
-    handler-class-name: xxx
+    handler: xxx
     description-bundle-id: xxx
