@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") version "1.8.20"
-    id("org.jetbrains.compose") version "1.4.0"
+    id("org.jetbrains.compose") version "1.5.1"
 }
 
 group = "top.myrest"
@@ -21,7 +21,7 @@ val myflowVersion = "1.0.0"
 dependencies {
     compileOnly(compose.desktop.currentOs)
     compileOnly("top.myrest:myflow-kit:$myflowVersion")
-    testImplementation("top.myrest:myflow-baseimpl:$myflowVersion")
+    compileOnly("top.myrest:myflow-baseimpl:$myflowVersion")
 }
 
 tasks.withType<KotlinCompile> {
