@@ -7,7 +7,7 @@ import top.myrest.myflow.dev.DevProps
 fun main() {
     enableDevEnv()
     DevProps.disableNativeListener = false
-    AppInfo.actionWindow.isUndecorated = false
     FlowApp().configApp()
+    // Actions.register("settings", AppSettingsActionHandler())
     App(AppInfo.APP_NAME + "Xxx")
 }
