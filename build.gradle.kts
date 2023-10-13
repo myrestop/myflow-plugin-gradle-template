@@ -35,18 +35,13 @@ tasks.jar {
     configurations.runtimeClasspath.get().allDependencies.forEach { dependency ->
         configurations.runtimeClasspath.get().files(dependency).forEach { file ->
             if (exists.add(file.name)) {
+                println(file.name)
                 files.add(if (file.isDirectory) file else zipTree(file))
             }
         }
     }
     from(files)
-
-    exclude(
-        "module-info.class",
-        "META-INF/NOTICE",
-        "META-INF/LICENSE",
-        "META-INF/versions/9/module-info.class",
-    )
+    exclude(".gitkeep")
 }
 
 tasks.build {
