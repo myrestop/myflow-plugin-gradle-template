@@ -9,7 +9,6 @@ logo: ./logos/xxx.png
 compatible-version:
   since-build: 0
   until-build: 2147483647
-description-filename: description.md
 owner:
   name: xxx
   email: xxx@xxx.xxx
@@ -31,10 +30,6 @@ platforms:
   - WINDOWS
   - MACOS
   - LINUX
-languages:
-  - EN_US
-  - ZH_CN
-  - ZH_TW
 language-bundle-name: com.example.kotlin.LanguageBundle
 actions:
   - keywords:
