@@ -2,7 +2,6 @@ id: xxx
 name: xxx
 names:
   ZH_CN: 模版仓库
-  ZH_TW: 模版倉庫
 entry: ./myflow-plugin-gradle-template.jar
 version: 1.0.0
 logo: ./logos/xxx.png
