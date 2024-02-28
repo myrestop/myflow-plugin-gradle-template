@@ -4,8 +4,8 @@ import java.util.zip.ZipOutputStream
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.8.20"
-    id("org.jetbrains.compose") version "1.5.1"
+    kotlin("jvm") version "1.9.22"
+    id("org.jetbrains.compose") version "1.5.12"
 }
 
 group = "top.myrest"
@@ -19,7 +19,7 @@ repositories {
     google()
 }
 
-val myflowVersion = "1.0.0"
+val myflowVersion = "1.0.1"
 
 dependencies {
     compileOnly(compose.desktop.currentOs)
@@ -69,7 +69,7 @@ tasks.build {
 tasks.register("packagePlugin") {
     group = "build"
     description = "Package as runflow plugin zip file."
-    dependsOn("build")
+    dependsOn(tasks.build)
     doLast {
         val zipFile = file("./runflow-plugin.zip")
         val zip = ZipOutputStream(FileOutputStream(zipFile))
