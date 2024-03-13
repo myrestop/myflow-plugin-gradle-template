@@ -19,11 +19,13 @@ repositories {
     google()
 }
 
-val myflowVersion = "1.0.1"
+val myflowVersion = "1.0.6"
 
+var myflowDependency: Dependency? = null
+var jetbrainsComposeDependency: Dependency? = null
 dependencies {
-    compileOnly(compose.desktop.currentOs)
-    compileOnly("top.myrest:myflow-kit:$myflowVersion")
+    jetbrainsComposeDependency = implementation(compose.desktop.currentOs)
+    myflowDependency = implementation("top.myrest:myflow-kit:$myflowVersion")
     testImplementation("top.myrest:myflow-baseimpl:$myflowVersion")
 }
 
@@ -35,7 +37,12 @@ tasks.jar {
     archiveFileName.set(entry)
     val exists = mutableSetOf<String>()
     val files = mutableListOf<Any>()
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     configurations.runtimeClasspath.get().allDependencies.forEach { dependency ->
+        if (dependency == myflowDependency || dependency == jetbrainsComposeDependency) {
+            return@forEach
+        }
+        println(dependency)
         configurations.runtimeClasspath.get().files(dependency).forEach { file ->
             if (exists.add(file.name)) {
                 println(file.name)
@@ -44,7 +51,6 @@ tasks.jar {
         }
     }
     from(files)
-    exclude(".gitkeep")
 }
 
 tasks.build {
