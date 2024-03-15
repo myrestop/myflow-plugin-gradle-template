@@ -7,7 +7,7 @@ version: 1.0.0
 logo: ./logos/xxx.png
 compatible-version:
   since-build: 1
-  until-build: 392
+  until-build: 436
 owner:
   name: xxx
   email: xxx@xxx.xxx

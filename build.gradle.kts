@@ -19,7 +19,7 @@ repositories {
     google()
 }
 
-val myflowVersion = "1.0.7"
+val myflowVersion = "1.0.8"
 
 var myflowDependency: Dependency? = null
 var jetbrainsComposeDependency: Dependency? = null
