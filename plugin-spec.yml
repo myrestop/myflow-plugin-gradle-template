@@ -6,8 +6,8 @@ entry: ./myflow-plugin-gradle-template.jar
 version: 1.0.0
 logo: ./logos/xxx.png
 compatible-version:
-  since-build: 955
-  until-build: 955
+  since-build: 961
+  until-build: 961
 owner:
   name: xxx
   email: xxx@xxx.xxx
